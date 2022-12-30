@@ -152,8 +152,6 @@ pytest_check
 python-dateutil
 python-slugify
 pytz
-pywin32
-pywinpty
 PyYAML
 pyzmq
 regex
