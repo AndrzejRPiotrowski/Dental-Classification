@@ -1,11 +1,9 @@
-bsl-py
 adb-shell
 aiohttp
 aiosignal
 altair
 anyio
 appdirs
-Appium-Python-Client
 argon2-cffi
 asgiref
 astor
