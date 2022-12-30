@@ -189,7 +189,6 @@ tqdm
 traitlets
 trio
 trio-websocket
-ttkthemes
 typeguard
 typing-extensions
 typing-inspect
