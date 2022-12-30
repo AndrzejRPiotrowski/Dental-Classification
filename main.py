@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
-import matplotlib.pyplot as plt
-# import tensorflow_hub as hub
+import tensorflow_hub as hub
 import tensorflow as tf
 import numpy as np
 import keras
@@ -18,7 +17,6 @@ from keras.preprocessing.image import ImageDataGenerator
 from sklearn.metrics import classification_report,confusion_matrix
 import tensorflow as tf
 from keras.optimizers import Adam
-# from keras.optimizer_v2.adam import Adam
 import matplotlib.pyplot as plt
 import seaborn as sns
 import cv2
