@@ -42,11 +42,9 @@ st.markdown("Granty Norweskie 2023")
 x = st.slider('x')  # 👈 this is a widget
 st.write(x, 'squared is', x * 
          
-add_selectbox = st.sidebar.selectbox(
-    'How would you like to be contacted?',
-    ('Email', 'Home phone', 'Mobile phone')
-)
-
+st.date_input(label, value=None, min_value=None, max_value=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
+st.camera_input(label, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
+         
 def predict(image):
     classifier_model = 'newclass04.h5'
     model=keras.models.load_model(classifier_model)
