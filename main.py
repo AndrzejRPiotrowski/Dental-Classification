@@ -37,8 +37,8 @@ st.markdown("Model rozpoznaje następujące schorzenia : Martwy Ząb")
 st.markdown("Model rozpoznaje następujące schorzenia : Brak uzębienia")
 st.markdown("Model rozpoznaje następujące schorzenia : Zdrowy ząb")
 st.markdown("Granty Norweskie 2023")
-x = st.slider('x')  # 👈 this is a widget
-st.write(x, 'squared is', x * 
+#x = st.slider('x')  # 👈 this is a widget
+#st.write(x, 'squared is', x * 
      
 #img_file_buffer = st.camera_input("Zrób zdjęcie")
 #if img_file_buffer is not None:
