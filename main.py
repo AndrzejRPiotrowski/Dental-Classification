@@ -39,6 +39,13 @@ st.markdown("Model rozpoznaje następujące schorzenia : Martwy Ząb")
 st.markdown("Model rozpoznaje następujące schorzenia : Brak uzębienia")
 st.markdown("Model rozpoznaje następujące schorzenia : Zdrowy ząb")
 st.markdown("Granty Norweskie 2023")
+x = st.slider('x')  # 👈 this is a widget
+st.write(x, 'squared is', x * 
+         
+add_selectbox = st.sidebar.selectbox(
+    'How would you like to be contacted?',
+    ('Email', 'Home phone', 'Mobile phone')
+)
 
 def predict(image):
     classifier_model = 'newclass04.h5'
