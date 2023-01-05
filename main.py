@@ -39,11 +39,7 @@ st.markdown("Model rozpoznaje następujące schorzenia : Zdrowy ząb")
 st.markdown("Granty Norweskie 2023")
 x = st.slider('x')  # 👈 this is a widget
 st.write(x, 'squared is', x * 
-
-picture = st.camera_input("Take a picture")
-
-if picture:
-    st.image(picture)      
+     
 img_file_buffer = st.camera_input("Zrób zdjęcie")
 if img_file_buffer is not None:
     # To read image file buffer as bytes:
