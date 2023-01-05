@@ -40,16 +40,16 @@ st.markdown("Granty Norweskie 2023")
 x = st.slider('x')  # 👈 this is a widget
 st.write(x, 'squared is', x * 
      
-img_file_buffer = st.camera_input("Zrób zdjęcie")
-if img_file_buffer is not None:
+#img_file_buffer = st.camera_input("Zrób zdjęcie")
+#if img_file_buffer is not None:
     # To read image file buffer as bytes:
-    bytes_data = img_file_buffer.getvalue()
+   # bytes_data = img_file_buffer.getvalue()
     # Check the type of bytes_data:
     # Should output: <class 'bytes'>
-    st.write(type(bytes_data))
+  #  st.write(type(bytes_data))
          
-st.date_input(label, value=None, min_value=None, max_value=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
-st.camera_input(label, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
+#st.date_input(label, value=None, min_value=None, max_value=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
+#st.camera_input(label, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
          
 def predict(image):
     classifier_model = 'newclass04.h5'
