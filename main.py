@@ -31,8 +31,14 @@ from keras import backend as K
 
 
 fig = plt.figure()
-st.title('Dental Curie detection')
-st.markdown("Prediction : (Dental Problems)")
+st.title('NeptuneDent - Sprawdz stan swoich zębów')
+st.markdown("Model oparty na przetwarzanie AI (Predykcja) : Najczęstrze problemy")
+st.markdown("Model został oparty na danych własnych gabinetu Agnieszka Nowińska Indywidualna Praktyka Dentystyczna")
+st.markdown("Model rozpoznaje następujące schorzenia : Próchnica")
+st.markdown("Model rozpoznaje następujące schorzenia : Martwy Ząb")
+st.markdown("Model rozpoznaje następujące schorzenia : Brak uzębienia")
+st.markdown("Model rozpoznaje następujące schorzenia : Zdrowy ząb")
+st.markdown("Granty Norweskie 2023")
 
 def predict(image):
     classifier_model = 'newclass04.h5'
@@ -49,7 +55,7 @@ def predict(image):
     print(predictions)
     a=np.array(max(predictions))
     print(class_names[np.argmax(a)])
-    result = f"Predicted as {class_names[np.argmax(a)]} with {(max(a)*100).__round__(2)} % confidence. "
+    result = f"Dokładność uzyskana na podstawie predykcji {class_names[np.argmax(a)]} with {(max(a)*100).__round__(2)} %. "
 
     return result
 
@@ -86,29 +92,29 @@ def pred(image):
     print(prediction)
     a = np.array(max(prediction))
     print(class_names[np.argmax(a)])
-    result = f"Predicted as {class_names[np.argmax(a)]} with {(max(a) * 100).__round__(2)} % confidence. "
+    result = f"Dokładność uzyskana na podstawie predykcji {class_names[np.argmax(a)]} with {(max(a) * 100).__round__(2)} %. "
 
 
 
     return result
 
 
-file_uploaded = st.file_uploader("Choose File", type=["png", "jpg", "jpeg"])
-class_btn = st.button("CHECK")
+file_uploaded = st.file_uploader("WSKAŻ PLIK", type=["png", "jpg", "jpeg"])
+class_btn = st.button("DOKONAJ ANALIZY")
 if file_uploaded is not None:
     image = Image.open(file_uploaded)
-    st.image(image, caption='Uploaded Image', use_column_width=True)
+    st.image(image, caption='WGRAJ PLIK', use_column_width=True)
 
 if class_btn:
     if file_uploaded is None:
-        st.write("Invalid command, please upload an image")
+        st.write("BŁĘDNY STAN - PROGRAM SIĘ ZRESTARTUJE")
     else:
-        with st.spinner('Model working....'):
+        with st.spinner('ANALIZA W TOKU....'):
             plt.imshow(image)
             plt.axis("off")
             predictions = predict(image)
             time.sleep(1)
-            st.success('Prediction Succesful.')
+            st.success('ANALIZA ZAKOŃCZONA SUKCESEM.')
             st.write(predictions)
 
 
