@@ -30,13 +30,27 @@ from keras import backend as K
 
 fig = plt.figure()
 st.title('NeptuneDent - Sprawdz stan swoich zębów')
-st.markdown("Model oparty na przetwarzanie AI (Predykcja) : Najczęstrze problemy")
+st.markdown("-------------------------------------------------------------------------------------------------------")
+st.markdown("Model oparty na przetwarzaniu obrazu przy użyciu algorytmu AI (Predykcja) : Najczęstrze problemy pacjentów")
+st.markdown("-------------------------------------------------------------------------------------------------------")
 st.markdown("Model został oparty na danych własnych gabinetu Agnieszka Nowińska Indywidualna Praktyka Dentystyczna")
+st.markdown("-------------------------------------------------------------------------------------------------------")
+
+st.markdown("'Próchnica = CAVITY', 1: 'Martwy Ząb = COLD SORES' 2:'Brak uzębienia = DEAD TOOTH',3:' Parodontoza = GINGIVITY',4:' Zdrowy - HEALTHY'}")
+st.markdown("-------------------------------------------------------------------------------------------------------")
 st.markdown("Model rozpoznaje następujące schorzenia : Próchnica")
+st.markdown("Jak działa rozpoznawanie")
+st.markdown("-------------------------------------------------------------------------------------------------------")
 st.markdown("Model rozpoznaje następujące schorzenia : Martwy Ząb")
+st.markdown("Jak działa rozpoznawanie")
+st.markdown("-------------------------------------------------------------------------------------------------------")
 st.markdown("Model rozpoznaje następujące schorzenia : Brak uzębienia")
+st.markdown("Jak działa rozpoznawanie")
+st.markdown("-------------------------------------------------------------------------------------------------------")
 st.markdown("Model rozpoznaje następujące schorzenia : Zdrowy ząb")
-st.markdown("Granty Norweskie 2023")
+st.markdown("Jak działa rozpoznawanie")
+st.markdown("-------------------------------------------------------------------------------------------------------")
+st.markdown("Granty Norweskie 2023 - Norway Grants 2023")
 #x = st.slider('x')  # 👈 this is a widget
 #st.write(x, 'squared is', x * 
      
