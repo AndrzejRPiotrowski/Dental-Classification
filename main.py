@@ -104,7 +104,7 @@ def pred(image):
     # resizing the image to be at least 224x224 and then cropping from the center
     size = (224, 224)
     image = ImageOps.fit(image, size, Image.ANTIALIAS)
-    class_names = {0: 'CAVITY', 1: 'COLD SORES',2:"DEAD TOOTH",3:"GINGIVITY",4:"HEALTHY"}
+    class_names = {0: 'Test1', 1: 'Test2',2:"Test3",3:"Test4",4:"Test5"}
     # turn the image into a numpy array
     image_array = np.asarray(image)
     # Normalize the image
