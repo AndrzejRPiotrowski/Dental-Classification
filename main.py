@@ -1,6 +1,16 @@
 import streamlit as st
 from objectDetection import *
+from detectron2.engine import DefaultPredictor
+import detectron2
+from detectron2.utils.logger import setup_logger
+setup_logger()
+from detectron2.utils.video_visualizer import VideoVisualizer
+from detectron2.config import get_cfg
+from detectron2.data import MetadataCatalog
+from detectron2.utils.visualizer import ColorMode, Visualizer
+from detectron2 import model_zoo
 from PIL import Image
+import tqdm
 import tensorflow_hub as hub
 import tensorflow as tf
 import numpy as np
