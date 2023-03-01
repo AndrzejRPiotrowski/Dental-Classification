@@ -69,13 +69,13 @@ def predict(image):
     classifier_model = 'newclass04.h5'
     model=keras.models.load_model(classifier_model)
 
-
+#{0: 'CAVITY', 1: 'COLD SORES',2:"DEAD TOOTH",3:"GINGIVITY",4:"HEALTHY"}
 
     test_image = image.resize((244, 244))
     test_image = np.array(test_image)
     test_image = test_image / 255.0
     test_image = np.expand_dims(test_image, axis=0)
-    class_names = {0: 'CAVITY', 1: 'COLD SORES',2:"DEAD TOOTH",3:"GINGIVITY",4:"HEALTHY"}
+    class_names = {0: 'Test1', 1: 'Test2',2:"Test3",3:"Test4",4:"Test5"}
     predictions = model.predict(test_image)
     print(predictions)
     a=np.array(max(predictions))
