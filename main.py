@@ -1,5 +1,5 @@
 import streamlit as st
-from objectDetection import *
+import tensorflow-object-detection-api
 from detectron2.engine import DefaultPredictor
 import detectron2
 from detectron2.utils.logger import setup_logger
