@@ -35,8 +35,6 @@ st.markdown("Model oparty na przetwarzaniu obrazu przy użyciu algorytmu AI (Pre
 st.markdown("-------------------------------------------------------------------------------------------------------")
 st.markdown("Model został oparty na danych własnych gabinetu Agnieszka Nowińska Indywidualna Praktyka Dentystyczna")
 st.markdown("-------------------------------------------------------------------------------------------------------")
-
-st.markdown("'Próchnica = CAVITY', 1: 'Martwy Ząb = COLD SORES' 2:'Brak uzębienia = DEAD TOOTH',3:' Parodontoza = GINGIVITY',4:' Zdrowy - HEALTHY'}")
 st.markdown("-------------------------------------------------------------------------------------------------------")
 st.markdown("Model rozpoznaje następujące schorzenia : Próchnica")
 st.markdown("Jak działa rozpoznawanie")
@@ -44,7 +42,7 @@ st.markdown("-------------------------------------------------------------------
 st.markdown("Model rozpoznaje następujące schorzenia : Martwy Ząb")
 st.markdown("Jak działa rozpoznawanie")
 st.markdown("-------------------------------------------------------------------------------------------------------")
-st.markdown("Model rozpoznaje następujące schorzenia : Brak uzębienia")
+st.markdown("Model rozpoznaje następujące schorzenia : Zapalenie dziąseł")
 st.markdown("Jak działa rozpoznawanie")
 st.markdown("-------------------------------------------------------------------------------------------------------")
 st.markdown("Model rozpoznaje następujące schorzenia : Zdrowy ząb")
@@ -75,7 +73,7 @@ def predict(image):
     test_image = np.array(test_image)
     test_image = test_image / 255.0
     test_image = np.expand_dims(test_image, axis=0)
-    class_names = {0: 'Test1', 1: 'Test2',2:"Test3",3:"Test4",4:"Test5"}
+    class_names = {0: 'Próchnica/Ubytek', 1: 'Opryszka ',2:"Martwy Ząb ",3:"Zapalenie dziąseł",4:"Zdrowy ząb"}
     predictions = model.predict(test_image)
     print(predictions)
     a=np.array(max(predictions))
